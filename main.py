@@ -14,7 +14,7 @@ def main():
             if option == "Parquet to CSV":
                 df = pd.read_parquet(io.BytesIO(uploaded_file.getvalue()))
 
-                set.write("DataFrame preview")
+                st.write("DataFrame preview")
                 st.dataframe(df.head())
 
                 csv = df.to_csv(index=False).encode('utf-8')
